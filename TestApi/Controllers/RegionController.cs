@@ -14,7 +14,7 @@ namespace TestApi.Controllers
         private readonly IRegionRepository _regionRepo;
 
         protected const string PHONE_NUMBER_NULL_VALUE = "The phone number should have a value.";
-        protected const string PHONE_NUMBER_LENGTH = "The length of phone number does not fullfill required length.";
+        protected const string PHONE_NUMBER_REQUIRED_LENGTH = "The length of phone number does not fulfill required length.";
         protected const string REGION_NOT_FOUND = "There is no region with this prefix.";
 
         public RegionController(IRegionRepository regionRepo)
@@ -44,7 +44,7 @@ namespace TestApi.Controllers
 
                 if (phone.Length < 4 || phone.Length > 8)
                 {
-                    return StatusCode(StatusCodes.Status406NotAcceptable, PHONE_NUMBER_LENGTH);
+                    return StatusCode(StatusCodes.Status406NotAcceptable, PHONE_NUMBER_REQUIRED_LENGTH);
                 }
 
                 var regions = _regionRepo.GetRegions();

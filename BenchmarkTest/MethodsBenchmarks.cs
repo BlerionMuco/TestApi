@@ -13,7 +13,7 @@ namespace BenchmarkTest
         private static readonly Methods methods = new Methods();
 
         [Benchmark]
-        public void GetRegionsFromTestUnitProject()
+        public void GetRegionsFromModel()
         {
             methods.GetRegionsFromModel(phoneNumber);
         }

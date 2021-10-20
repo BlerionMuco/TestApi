@@ -43,7 +43,7 @@ namespace BenchmarkTest
                     Id = 6,
                     RegionPrefix = "0015",
                     RegionName = "Region5"
-                },
+                }
             };
             return regions;
         }
